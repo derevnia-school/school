@@ -1,0 +1,41 @@
+<app-menu></app-menu>
+<section class="img-school">
+  <img src="../../../assets/img/school.jpg" alt="">
+
+</section>
+<section class="news">
+  <h2>Новини</h2>
+  <div class="wrap">
+    <div class="card" style="width:300px" *ngFor="let new of news">
+      <img class="card-img-top" src="{{new.img}}" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">{{new.title}}</h4>
+        <div class="data">
+          <p><i class="far fa-calendar-alt"></i> {{new.data.month}} {{new.data.day}}, {{new.data.year}}</p>
+        </div>
+        <a href="#" class="btn btn-primary">Більше ...</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="info" >
+  <div class="wrap">
+    <div class="item" *ngFor="let info of infos">
+      <div class="left">
+        <div class="logo" [ngStyle]="{'background-color':(info.bg)}">
+          <i class="fas fa-book fa-3x"></i>
+        </div>
+      </div>
+      <div class="right">
+        <div class="content">
+          <h6>{{info.title}}</h6>
+          <p>{{info.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-footer></app-footer>
